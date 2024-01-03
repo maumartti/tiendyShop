@@ -10,6 +10,8 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ asset('css/tienda.css') }}" rel="stylesheet">
+    <!-- <link href="{{ asset('css/util.css') }}" rel="stylesheet"> -->
+    <!-- <link href="{{ asset('css/main.css') }}" rel="stylesheet"> -->
     <!-- Inter font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +26,9 @@
     <!-- Contenido que permanece visible en pantallas móviles -->
     <div id="navbarTitle" class="visible-on-mobile d-flex justify-content-between align-items-center">
       <a class="navbar-brand" href="#" >Navbar</a>
-      <i class="fas fa-shopping-cart d-lg-none" style="font-size:20px;"></i> <!-- A la derecha en pantallas móviles -->
+      <div class="icon-header-item js-show-cart" data-notify="0"><!--CART 1 -->
+        <i class="fas fa-shopping-cart d-lg-none" style="font-size:20px;"></i> <!-- A la derecha en pantallas móviles -->
+      </div>
     </div>
 
     <!-- Botón de menú y contenido del menú desplegable -->
@@ -45,16 +49,13 @@
       </ul>
       <!-- Contenido que se mueve a la izquierda en pantallas más pequeñas -->
       <div class="visible-on-mobile order-last d-flex align-items-center" >
-        <i class="fas fa-shopping-cart d-none d-md-inline " style="font-size:20px;"></i> <!-- Ocultar en pantallas pequeñas -->
+        <div class="icon-header-item js-show-cart" data-notify="0"><!--CART 2 -->
+          <i class="fas fa-shopping-cart d-none d-md-inline " style="font-size:20px;"></i> <!-- Ocultar en pantallas pequeñas -->
+        </div>
       </div>
     </div>
   </div>
 </nav>
-
-
-
-
-
 
 
 <div class="container mt-2">
@@ -260,6 +261,95 @@
                 
 
 
+                <!-- Cart -->
+                <div class="wrap-header-cart js-panel-cart">
+                  <div class="s-full js-hide-cart"></div>
+
+                  <div class="header-cart flex-col-l p-3 p-md-5">
+                      <div class="header-cart-title flex-w flex-sb-m pb-3">
+                          <span class="m-2">
+                              Your Cart
+                          </span>
+
+                          <div class="fs-3 lh-1 cl2 px-2 pointer hov-cl1 trans-04 js-hide-cart">
+                              <i class="zmdi zmdi-close"></i>
+                          </div>
+                      </div>
+
+                      <div class="header-cart-content flex-w js-pscroll">
+                          <ul class="header-cart-wrapitem w-full">
+                              <li class="header-cart-item flex-w flex-t mb-3">
+                                  <div class="header-cart-item-img">
+                                      <img src="images/item-cart-01.jpg" alt="IMG">
+                                  </div>
+
+                                  <div class="header-cart-item-txt pt-2">
+                                      <a href="#" class="header-cart-item-name mb-2 hov-cl1 trans-04">
+                                          White Shirt Pleat
+                                      </a>
+
+                                      <span class="header-cart-item-info">
+                                          1 x $19.00
+                                      </span>
+                                  </div>
+                              </li>
+
+                              <li class="header-cart-item flex-w flex-t mb-3">
+                                  <div class="header-cart-item-img">
+                                      <img src="images/item-cart-02.jpg" alt="IMG">
+                                  </div>
+
+                                  <div class="header-cart-item-txt pt-2">
+                                      <a href="#" class="header-cart-item-name mb-2 hov-cl1 trans-04">
+                                          Converse All Star
+                                      </a>
+
+                                      <span class="header-cart-item-info">
+                                          1 x $39.00
+                                      </span>
+                                  </div>
+                              </li>
+
+                              <li class="header-cart-item flex-w flex-t mb-3">
+                                  <div class="header-cart-item-img">
+                                      <img src="images/item-cart-03.jpg" alt="IMG">
+                                  </div>
+
+                                  <div class="header-cart-item-txt pt-2">
+                                      <a href="#" class="header-cart-item-name mb-2 hov-cl1 trans-04">
+                                          Nixon Porter Leather
+                                      </a>
+
+                                      <span class="header-cart-item-info">
+                                          1 x $17.00
+                                      </span>
+                                  </div>
+                              </li>
+                          </ul>
+
+                          <div class="w-full">
+                              <div class="header-cart-total w-full p-3">
+                                  Total: $75.00
+                              </div>
+
+                              <div class="header-cart-buttons flex-w w-full">
+                                  <a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-2 me-2 mb-2">
+                                      View Cart
+                                  </a>
+
+                                  <a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-2 mb-2">
+                                      Check Out
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+
+
+
+
 
                 <div class="col-lg-8 mt-5">
                   <div class="module">
@@ -381,8 +471,37 @@
 </div>
 
 
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 <!-- Bootstrap JS and dependencies -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"></script>
+<script>
+    /*==================================================================
+    [ Cart ]*/
+    $(document).ready(function () {
+      $('.js-show-cart').on('click', function () {
+          console.log('open cart')
+          $('.js-panel-cart').addClass('show-header-cart');
+      });
+
+      $('.js-hide-cart').on('click', function () {
+          console.log('close cart')
+          $('.js-panel-cart').removeClass('show-header-cart');
+      });
+
+      /*==================================================================
+      [ Cart ]*/
+      $('.js-show-sidebar').on('click', function () {
+          console.log('open cart')
+          $('.js-sidebar').addClass('show-sidebar');
+      });
+
+      $('.js-hide-sidebar').on('click', function () {
+          $('.js-sidebar').removeClass('show-sidebar');
+      });
+    });
+</script>
 </body>
 </html>
