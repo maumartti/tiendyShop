@@ -25,9 +25,9 @@
   <div class="container py-2">
     <!-- Contenido que permanece visible en pantallas móviles -->
     <div id="navbarTitle" class="visible-on-mobile d-flex justify-content-between align-items-center">
-      <a class="navbar-brand" href="#" >Navbar</a>
-      <div class="icon-header-item js-show-cart" data-notify="0"><!--CART 1 -->
-        <i class="fas fa-shopping-cart d-lg-none" style="font-size:20px;"></i> <!-- A la derecha en pantallas móviles -->
+      <a class="navbar-brand" href="#" >Shoes Tienda</a>
+      <div class="icon-header-item" data-notify="0"><!--CART 1 -->
+        <i class="nav-link d-inline pe-0 fas fa-shopping-cart d-lg-none js-show-cart" style="font-size:20px;position:relative;top:3px;"></i> <!-- A la derecha en pantallas móviles -->
       </div>
     </div>
 
@@ -41,16 +41,25 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Hombres</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Mujeres</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Niños</a>
         </li>
         <li class="nav-item order-md-last"> <!-- Utilizamos la clase order-md-last para mover este elemento al final en pantallas medianas y grandes -->
-          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          <a class="nav-link d-lg-none" href="#" tabindex="-1" aria-disabled="true">Entrar <i class="fas fa-sign-in-alt"></i></a>
         </li>
       </ul>
       <!-- Contenido que se mueve a la izquierda en pantallas más pequeñas -->
       <div class="visible-on-mobile order-last d-flex align-items-center" >
         <div class="icon-header-item js-show-cart" data-notify="0"><!--CART 2 -->
-          <i class="fas fa-shopping-cart d-none d-md-inline " style="font-size:20px;"></i> <!-- Ocultar en pantallas pequeñas -->
+          <i class="nav-link d-inline pe-0 fas fa-shopping-cart d-none d-md-inline " style="font-size:18px;"></i> <!-- Ocultar en pantallas pequeñas -->
+        </div>
+        <div class="icon-header-item"><!--CART 2 -->
+          <a class="nav-link d-inline d-none d-md-inline grey" href="#">Entrar</a>
         </div>
       </div>
     </div>
@@ -244,7 +253,7 @@
                             <h4 class="display-4 color-dark mt-1 fs-6">Talles: S M XL</h4>
                             <div class="mt-4 d-flex">
                               <button type="button" class="btn btn-primary rounded-pill btn-blue ms-0" style="width:44px;"><i class="fas fa-shopping-cart" style="position: relative;left: -5px;"></i></button>
-                              <button type="button" class="btn btn-primary rounded-pill btn-blue ms-1"><i class="fas fa-dollar-sign"></i> Comprar</button>
+                              <button type="button" class="btn btn-primary rounded-pill btn-blue ms-1"><i class="fas fa-credit-card"></i> Comprar</button>
                               <button type="button" class="btn btn-primary rounded-pill btn-white ms-1"><i class="fab fa-whatsapp"></i> Compartir</button>
                             </div>
                           </div>                   
@@ -265,81 +274,68 @@
                 <div class="wrap-header-cart js-panel-cart">
                   <div class="s-full js-hide-cart"></div>
 
-                  <div class="header-cart flex-col-l p-3 p-md-5">
+                  <div class="header-cart flex-col-l py-4 px-5">
                       <div class="header-cart-title flex-w flex-sb-m pb-3">
-                          <span class="m-2">
-                              Your Cart
-                          </span>
-
-                          <div class="fs-3 lh-1 cl2 px-2 pointer hov-cl1 trans-04 js-hide-cart">
-                              <i class="zmdi zmdi-close"></i>
-                          </div>
+                          <h4 class="m-2 display-4">Tu carrito
+                            <div class="fs-3 lh-1 cl2 px-2 pointer hov-cl1 trans-04 text-end js-hide-cart" style="width: 40px;float: right;">
+                                <i class="fas fa-times grey"></i>
+                            </div>
+                          </h4>
                       </div>
-
                       <div class="header-cart-content flex-w js-pscroll">
-                          <ul class="header-cart-wrapitem w-full">
-                              <li class="header-cart-item flex-w flex-t mb-3">
+                          <ul class="header-cart-wrapitem w-full list-unstyled">
+                              <li class="header-cart-item flex-w flex-t d-flex mb-3">
                                   <div class="header-cart-item-img">
-                                      <img src="images/item-cart-01.jpg" alt="IMG">
+                                      <img src="./images/p1.png" alt="IMG">
                                   </div>
-
-                                  <div class="header-cart-item-txt pt-2">
-                                      <a href="#" class="header-cart-item-name mb-2 hov-cl1 trans-04">
-                                          White Shirt Pleat
-                                      </a>
-
-                                      <span class="header-cart-item-info">
-                                          1 x $19.00
-                                      </span>
+                                  <div class="header-cart-item-txt pt-2 ms-0">
+                                      <div>
+                                          <a href="#" class="header-cart-item-name mb-2 hov-cl1 trans-04">
+                                              White Shirt Pleat 
+                                          </a>
+                                          <span class="header-cart-item-info">
+                                              1 x $19.00
+                                          </span>
+                                      </div>
                                   </div>
                               </li>
-
-                              <li class="header-cart-item flex-w flex-t mb-3">
+                              <li class="header-cart-item flex-w flex-t d-flex mb-3">
                                   <div class="header-cart-item-img">
-                                      <img src="images/item-cart-02.jpg" alt="IMG">
+                                      <img src="./images/p5.png" alt="IMG">
                                   </div>
-
-                                  <div class="header-cart-item-txt pt-2">
-                                      <a href="#" class="header-cart-item-name mb-2 hov-cl1 trans-04">
-                                          Converse All Star
-                                      </a>
-
-                                      <span class="header-cart-item-info">
-                                          1 x $39.00
-                                      </span>
+                                  <div class="header-cart-item-txt pt-2 ms-0">
+                                      <div>
+                                          <a href="#" class="header-cart-item-name mb-2 hov-cl1 trans-04">
+                                              Converse All Star
+                                          </a>
+                                          <span class="header-cart-item-info">
+                                              1 x $39.00
+                                          </span>
+                                      </div>
                                   </div>
                               </li>
-
-                              <li class="header-cart-item flex-w flex-t mb-3">
+                              <li class="header-cart-item flex-w flex-t d-flex mb-3">
                                   <div class="header-cart-item-img">
-                                      <img src="images/item-cart-03.jpg" alt="IMG">
+                                      <img src="./images/p6.png" alt="IMG">
                                   </div>
-
-                                  <div class="header-cart-item-txt pt-2">
-                                      <a href="#" class="header-cart-item-name mb-2 hov-cl1 trans-04">
-                                          Nixon Porter Leather
-                                      </a>
-
-                                      <span class="header-cart-item-info">
-                                          1 x $17.00
-                                      </span>
+                                  <div class="header-cart-item-txt pt-2 ms-0">
+                                      <div>
+                                          <a href="#" class="header-cart-item-name mb-2 hov-cl1 trans-04">
+                                              Nixon Porter Leather
+                                          </a>
+                                          <span class="header-cart-item-info">
+                                              1 x $17.00
+                                          </span>
+                                      </div>
                                   </div>
                               </li>
                           </ul>
-
-                          <div class="w-full">
-                              <div class="header-cart-total w-full p-3">
+                          <div class="cont-total-cart w-full" style="margin-top:100px;">
+                              <h5 class="display-5 p-3 pb-2">
                                   Total: $75.00
-                              </div>
-
+                              </h5>
                               <div class="header-cart-buttons flex-w w-full">
-                                  <a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-2 me-2 mb-2">
-                                      View Cart
-                                  </a>
-
-                                  <a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-2 mb-2">
-                                      Check Out
-                                  </a>
+                                  <button type="button" class="btn btn-primary rounded-pill btn-blue ms-0"> Completar Compra <i class="fas fa-arrow-right"></i></button>
                               </div>
                           </div>
                       </div>
@@ -350,119 +346,6 @@
 
 
 
-
-                <div class="col-lg-8 mt-5">
-                  <div class="module">
-                    <h2>About me</h2><p>Lorem
-                      ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
-                     veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                     commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in 
-                     voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur 
-                     sint occaecat cupidatat non proident.</p><p>Sed ut perspiciatis unde 
-                     omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                      totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                      architecto beatae vitae dicta sunt explicabo.</p>
-                  </div>
-                  <!-- Buttons  -->
-                  <div class="my-5 mx-4 d-flex">
-                    <button class="btn btn-primary rounded-pill btn-blue">
-                        <div class="dashly-custom-icon color-accent-1 mg-right-8px"></div> Ubicación
-                    </button>
-                    <button class="btn btn-primary rounded-pill btn-white">
-                      <div class="line-rounded-icon"></div> Compartir
-                    </button>
-                </div>                
-                  <!-- Buttons  -->
-                </div>
-                <!-- Feature 2 -->
-                <div class="col-lg-4 mt-5">
-                  <div class="module skills">
-                    <h2 class="line-height-0 display-4">Skills</h2>
-                    <div class="divider top-28px---bottom-40px">
-                    </div>
-                      <div class="flex gap-12px children-wrap">
-                        <div class="badge-secondary gray large">
-                          <div class="text-200 medium">Webflow Development</div>
-                        </div>
-                        <div class="badge-secondary gray large">
-                          <div class="text-200 medium">asistencia</div>
-                        </div>
-                        <div class="badge-secondary gray large">
-                          <div class="text-200 medium">Addicciones</div>
-                        </div>
-                        <div class="badge-secondary gray large">
-                          <div class="text-200 medium">ayuda terapeutica</div>
-                        </div>
-                        <div class="badge-secondary gray large">
-                          <div class="text-200 medium">problemas de parja</div>
-                        </div>
-                        <div class="badge-secondary gray large">
-                          <div class="text-200 medium">hacerloam coemanebta</div>
-                        </div>
-                        <div class="badge-secondary gray large">
-                          <div class="text-200 medium">warelo dnerote</div>
-                        </div>
-                        <div class="badge-secondary gray large">
-                          <div class="text-200 medium">pelodme merte</div>
-                        </div>
-                        <div class="badge-secondary gray large">
-                          <div class="text-200 medium">kelodme</div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-                <!-- Feature 2 -->
-                <div class="col-lg-8">
-                  <div class="module skills">
-                    <h2 class="line-height-0 display-4">Experience</h2>
-                    <div class="divider top-28px---bottom-40px"></div>
-                     <!-- expereice 1-->
-                      <div class="experience-item">
-                        <div class="company-info">
-                            <img src="t2_files/6307bafa51abd9bde268699e_google-company-module-square-icon-d.svg" class="company-logo">
-                            <div class="company-details">
-                                <div class="company-name">Google</div>
-                                <div class="company-location">Mountain View, CA</div>
-                            </div>
-                        </div>
-                        <div class="employment-period">Mar 2022 - Present</div>
-                      </div>
-                      <p class="profile-experience-text">
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempo incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                      </p>                
-                      <!-- expereice 2-->
-                      <div class="divider top-28px---bottom-40px"></div>
-                        <div class="experience-item">
-                          <div class="company-info">
-                              <img src="t2_files/6307bafa51abd9bde268699e_google-company-module-square-icon-d.svg" class="company-logo">
-                              <div class="company-details">
-                                  <div class="company-name">Google</div>
-                                  <div class="company-location">Mountain View, CA</div>
-                              </div>
-                          </div>
-                          <div class="employment-period">Mar 2022 - Present</div>
-                        </div>
-                        <p class="profile-experience-text">
-                          Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempo incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                        </p>                
-                      </div>
-                      <!-- -->
-                    </div>
-                  </div>
-                </div>
-                <!-- Mapa -->
-                <div class="col-lg-8">
-                  <div class="module skills">
-                    <h2 class="line-height-0 display-4">Ubicación</h2>
-                    <div class="divider top-28px---bottom-40px"></div>
-                      <div class="experience-item">
-                        
-                        oooooooooooooo
-                      </div>
-                    </div>
-                  </div>
-                </div>
 
             </div>
         </div>
