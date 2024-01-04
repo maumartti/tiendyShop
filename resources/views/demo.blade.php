@@ -41,13 +41,16 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Hombres</a>
+          <a class="nav-link" href="#">Categorías</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Mujeres</a>
+          <a class="nav-link" href="#">Destacados</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Niños</a>
+          <a class="nav-link" href="#">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
         </li>
         <li class="nav-item order-md-last"> <!-- Utilizamos la clase order-md-last para mover este elemento al final en pantallas medianas y grandes -->
           <a class="nav-link d-lg-none" href="#" tabindex="-1" aria-disabled="true">Entrar <i class="fas fa-sign-in-alt"></i></a>

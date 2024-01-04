@@ -951,6 +951,7 @@ border-radius: 20px;
 
 .header-cart-item-img img {
   width: 100%;
+  border-radius:9px;
 }
 
 .header-cart-item-img::after {
