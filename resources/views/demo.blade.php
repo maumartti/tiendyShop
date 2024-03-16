@@ -204,7 +204,6 @@
               </div>
               <!-- end Modal-->
 
-
               <!-- Modal Metodos pago -->
               <div class="modal fade" id="exampleModalToggleTwo" aria-hidden="true" aria-labelledby="exampleModalToggleTwoLabel" tabindex="1">
                 <div class="modal-dialog modal-dialog-centered modal-sm">
