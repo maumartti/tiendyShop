@@ -868,7 +868,7 @@ border-radius: 20px;
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: #7c828a;
-  border-radius: 7px;
+  /* border-radius: 7px; */
 }
 
 /* Cambia el color de los indicadores de diapositivas a rojo */
