@@ -140,6 +140,101 @@
               </div>
 
 
+              <!-- Categoría galery -->
+              <div class="bestseller">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-md-12 col-sm-12 col-xs-12">
+                              <div class="product-related best">
+                                  <div class="title-pro-v1 hp1">
+                                      <h3 class="related-title text-center hp1 best">Categoría3</h3>
+                                  </div>
+                                  <div id="cont-gal-cat" class="owl-carousel owl-theme owl-cate v2 js-owl-cate-feat owl-feat-hp1">
+                                      <div class="item">
+                                      <div class="best-seller" style="display: flex;">
+                                          <div class="img-bestseller" style="width:150px;">
+                                              <a href="" class="hover-img-home1" style="">
+                                                  <img src="./images/p4.png" style="border-radius: 0%;" alt="">
+                                              </a>
+                                              <h3 class="text-center"><a href="/categoria/">AAAAASSS</a></h3>
+                                          </div>
+                                      </div>
+                                      </div>
+                                      <div class="item">
+                                      <div class="best-seller" style="display: flex;">
+                                          <div class="img-bestseller" style="width:150px;">
+                                              <a href="" class="hover-img-home1" style="">
+                                                  <img src="./images/p4.png" style="border-radius: 100%;" alt="">
+                                              </a>
+                                              <h3 class="text-center"><a href="/categoria/">AAAAASSS</a></h3>
+                                          </div>
+                                      </div>
+                                      </div>
+                                      <div class="item">
+                                      <div class="best-seller" style="display: flex;">
+                                          <div class="img-bestseller" style="width:150px;">
+                                              <a href="" class="hover-img-home1" style="">
+                                                  <img src="./images/p4.png" style="border-radius: 100%;" alt="">
+                                              </a>
+                                              <h3 class="text-center"><a href="/categoria/">AAAAASSS</a></h3>
+                                          </div>
+                                      </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Categoría galery -->
+              <div class="bestseller">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-md-12 col-sm-12 col-xs-12">
+                              <div class="product-related best">
+                                  <div class="title-pro-v1 hp1">
+                                      <h3 class="related-title text-center hp1 best">Categoría4</h3>
+                                  </div>
+                                  <div id="cont-gal-cat2" class="owl-carousel owl-theme owl-cate v2 js-owl-cate-feat owl-feat-hp1">
+                                      <div class="item">
+                                      <div class="best-seller" style="display: flex;">
+                                          <div class="img-bestseller" style="width:150px;">
+                                              <a href="" class="hover-img-home1" style="">
+                                                  <img src="./images/p4.png" style="border-radius: 0%;" alt="">
+                                              </a>
+                                              <h3 class="text-center"><a href="/categoria/">AAAAASSS</a></h3>
+                                          </div>
+                                      </div>
+                                      </div>
+                                      <div class="item">
+                                      <div class="best-seller" style="display: flex;">
+                                          <div class="img-bestseller" style="width:150px;">
+                                              <a href="" class="hover-img-home1" style="">
+                                                  <img src="./images/p4.png" style="border-radius: 100%;" alt="">
+                                              </a>
+                                              <h3 class="text-center"><a href="/categoria/">AAAAASSS</a></h3>
+                                          </div>
+                                      </div>
+                                      </div>
+                                      <div class="item">
+                                      <div class="best-seller" style="display: flex;">
+                                          <div class="img-bestseller" style="width:150px;">
+                                              <a href="" class="hover-img-home1" style="">
+                                                  <img src="./images/p4.png" style="border-radius: 100%;" alt="">
+                                              </a>
+                                              <h3 class="text-center"><a href="/categoria/">AAAAASSS</a></h3>
+                                          </div>
+                                      </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+
               <!-- Modal Item -->
               <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -262,6 +357,62 @@
       $('.js-hide-sidebar').on('click', function () {
           $('.js-sidebar').removeClass('show-sidebar');
       });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            autoplay: false,
+            autoplayTimeout: 3000,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                480: {
+                    items: 1
+                },
+                1014: {
+                    items: 1
+                },
+                1200: {
+                    items: 1
+                },
+                1600: {
+                    items: 1
+                }
+            }
+        });
+
+    });
+    $(document).ready(function() {
+        $('#cont-gal-cat').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            autoplay: false,
+            autoplayTimeout: 3000,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                480: {
+                    items: 1
+                },
+                1014: {
+                    items: 1
+                },
+                1200: {
+                    items: 1
+                },
+                1600: {
+                    items: 1
+                }
+            }
+        });
+
     });
 </script>
 @endsection
